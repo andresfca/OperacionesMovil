@@ -31,7 +31,7 @@
             android:inputType="number" />
 
         <EditText
-            android:id="@+id/editText5"
+            android:id="@+id/numerodos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -57,12 +57,14 @@
             android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="calcular"
             android:text="@string/calcular" />
 
         <Button
             android:id="@+id/button2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="borrar"
             android:text="@string/Borrar" />
 
     </LinearLayout>

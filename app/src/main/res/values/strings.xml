@@ -8,4 +8,6 @@
     <string name="Borrar">Borrar</string>
     <string name="calculadora">CALCULADORA</string>
     <string name="resulta">Resultado:</string>
+    <string name="mensaje_error">error</string>
+    <string name="mensaje_error_dos">errordos</string>
 </resources>
