@@ -11,4 +11,8 @@
     <string name="resultado">result</string>
     <string name="mensaje_error">type number one</string>
     <string name="mensaje_error_dos">type number two</string>
+    <string name="suma">Add</string>
+    <string name="resta">Substract</string>
+    <string name="multiplicacion">Multiplication</string>
+    <string name="division">Division</string>
 </resources>
