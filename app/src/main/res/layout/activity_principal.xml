@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="@string/primer_numero"
-            android:inputType="number"
+            android:inputType="number|numberSigned|numberDecimal"
             android:textAlignment="center" />
 
         <EditText
@@ -37,13 +37,13 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="@string/segundo_numero"
-            android:inputType="number"
+            android:inputType="number|numberDecimal"
             android:textAlignment="center" />
 
         <Spinner
             android:id="@+id/cmboperaciones"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="36dp" />
 
         <TextView
             android:id="@+id/resultado"
@@ -73,7 +73,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:onClick="calcular"
-                android:text="@string/calcular" />
+                android:text="@string/calcular"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/button2"
@@ -81,7 +82,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:onClick="borrar"
-                android:text="@string/Borrar" />
+                android:text="@string/Borrar"
+                android:textStyle="bold" />
 
         </LinearLayout>
 

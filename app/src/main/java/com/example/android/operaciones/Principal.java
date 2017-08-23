@@ -8,6 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Principal extends AppCompatActivity {
     private TextView res;
@@ -31,15 +32,29 @@ public class Principal extends AppCompatActivity {
     }
 
     public void calcular(View v){
-
+        double num1, num2, resu=0;
+        int opcion;
+        res.setText("");
 
         if(validar()) {
-            int num1, num2, resu;
-            num1 = Integer.parseInt(n1.getText().toString());
-            num2 = Integer.parseInt(n2.getText().toString());
-            resu = num1 + num2;
-
-            res.setText("" + resu);
+            opcion = operaciones.getSelectedItemPosition();
+            num1 = Double.parseDouble(n1.getText().toString());
+            num2 = Double.parseDouble(n2.getText().toString());
+            switch (opcion){
+                case 0:
+                    resu = num1 + num2;
+                    break;
+                case 1:
+                    resu= num1-num2;
+                    break;
+                case 2:
+                    resu = num1*num2;
+                    break;
+                case 3:
+                    resu = num1 / num2;
+                    break;
+            }
+            res.setText(" "+resu);
         }
     }
 
@@ -48,15 +63,22 @@ public class Principal extends AppCompatActivity {
         n1.setText("");
         n2.setText("");
         n1.requestFocus();
+        operaciones.setSelection(0);
     }
 
     public boolean validar(){
+
+        int posicion = operaciones.getSelectedItemPosition();
         if (n1.getText().toString().isEmpty()){
             n1.setError(resources.getString(R.string.mensaje_error));
             return false;
         }
         if (n2.getText().toString().isEmpty()){
             n2.setError(resources.getString(R.string.mensaje_error_dos));
+            return false;
+        }
+        if (Double.parseDouble(n2.getText().toString())==0 && posicion==3){
+            Toast.makeText(this,resources.getString(R.string.mensaje_error_tres),Toast.LENGTH_SHORT).show();
             return false;
         }
         return true;

@@ -15,4 +15,5 @@
     <string name="resta">Substract</string>
     <string name="multiplicacion">Multiplication</string>
     <string name="division">Division</string>
+    <string name="mensaje_error_tres">can\'t division by 0</string>
 </resources>
